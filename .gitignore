@@ -1,0 +1,29 @@
+# Ignorar node_modules en todos los niveles
+**/node_modules/
+**/.next/
+
+# Ignorar archivos de configuración sensible
+.env*
+.npmrc
+
+# Ignorar archivos del sistema
+.DS_Store
+*.pem
+
+# Ignorar logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ignorar carpetas de build
+/out/
+/build/
+
+# Mantener estos archivos en packages/
+!package/package.json
+!package/package-lock.json
+!package/tsconfig.json
+!package/next.config.*
+!package/postcss.config.*
+!package/public/
+!package/src/
