@@ -6,11 +6,13 @@ interface LogoProps {
   height?: number;
   className?: string;
 }
+const prefix = process.env.NODE_ENV === 'production' ? '/home' : '';
+
 const Logo: React.FC<LogoProps> = ({ width = 180, height = 70, className }) => {
   return (
     <Link href="/" className={className}>
       <Image
-        src="/images/logo/logo_Seinge.svg"
+        src={`${prefix}/images/logo/logo_Seinge.svg`}
         alt="logo"
         width={width}
         height={height}

@@ -58,18 +58,25 @@ const Hero = () => {
       <div className='container px-4 mx-auto'>
         <div className='flex flex-col'>
           <motion.div {...leftAnimation} className='w-full'>
-            {/* <div className='flex gap-6 items-center lg:justify-start justify-center mb-5 mt-24'>
-              <Image
-                src='/images/icons/icon-bag.svg'
-                alt='icon'
-                width={40}
-                height={40}
-              />
-            </div> */}
-            <h1 className='text-5xl md:text-7xl font-bold text-center text-white mb-18 leading-tight'>
+
+            {/* Antes*/}
+            {/* <h1 className='text-5xl md:text-7xl font-bold text-center text-white mb-18 leading-tight'>
               <span className='text-primary'>Unlock</span> Your Voice. Speak <span className='text-primary'>English</span>. Feel Different
+            </h1> */}
+            {/* Termina Antes*/}
+
+            {/* Aqui estoy cambiando*/}
+            <h1 className='text-5xl md:text-7xl font-bold text-center text-white mb-2 leading-tight'>
+              <span className='text-primary'>Welcome to</span> Sainge Club.
+            </h1>            
+            <h1 className='text-5xl md:text-5xl font-bold text-center text-white mb-18 leading-tight'>
+              <span className='text-primary'> Leisure activities </span>outside in English.
             </h1>
-            <div className='flex gap-8 mb-18 items-center lg:justify-start justify-center mb-5 mt-24'>
+            {/* Aqui termina lo que estoy cambiando*/}
+
+
+            {/* Antes*/}
+            {/* <div className='flex gap-8 mb-18 items-center lg:justify-start justify-center mb-5 mt-24'>
               <p className='text-white sm:text-28 text-18 mb-0'>
                 Un curso de inglés para adultos que <span className='text-primary'>combina</span> expresión oral, juegos, terapia lingüística y 
                 <span className='text-primary'> libertad</span>.
@@ -78,50 +85,40 @@ const Hero = () => {
                 Ideal para profesionales sin tiempo, pero con <span className='text-primary'>ganas de hablar</span> y sentirse 
               <span className='text-primary'> seguros</span>.
               </p>
+            </div> */}
+            {/* Termina Antes*/}
+
+
+            {/* Aqui estoy cambiando*/}
+            <div className="flex flex-col gap-8 mb-18 items-center justify-center mb-5 mt-24">
+              <p className='text-white sm:text-28 text-18 mb-0 text-center'>
+                What if the problem isn’t <span className='text-primary'>English… </span> but how you use it?
+              </p>
+              <p className='text-white sm:text-28 text-18 mb-0 text-center'>
+                English is not complicated, we think the hardest part is using it to <span className='text-primary'>connect </span>with people, places, new jobs and even better salaries.
+              </p>
             </div>
+            {/* Aqui termina lo que estoy cambiando*/}
+
+
             <div className='flex flex-col sm:flex-row gap-6 justify-center'>
               <button
                 className='bg-primary border border-primary rounded-lg text-21 font-medium hover:bg-transparent hover:text-primary text-darkmode py-2 px-7 z-50'
                 onClick={() => setIsBuyingOpen(true)}>
-                Ver Demo Gratis
+                {/* Ver Demo Gratis */}
+                Free DEMO
               </button>
-              <button
+
+            {/* Antes sin después*/}
+              {/* <button
                 className='bg-transparent border border-primary rounded-lg text-21 font-medium hover:bg-primary hover:text-darkmode text-primary py-2 px-7'
                 onClick={() => setIsSellingOpen(true)}>
                 Empezar Experiencia
-              </button>
+              </button> */}
+            {/* Termina Antes sin después*/}
+
             </div>
-            {/* <div className='flex items-center md:justify-start justify-center gap-12 mt-20'>
-              <Link href='#' className='hover:scale-110 duration-300'>
-                <Image
-                  src='/images/hero/playstore.png'
-                  alt='Play Store'
-                  width={240}
-                  height={70}
-                />
-              </Link>
-              <Link href='#' className='hover:scale-110 duration-300'>
-                <Image
-                  src='/images/hero/applestore.png'
-                  alt='App Store'
-                  width={240}
-                  height={70}
-                />
-              </Link>
-            </div> */}
           </motion.div>
-          {/* <motion.div
-            {...rightAnimation}
-            className='col-span-7 lg:block hidden'>
-            <div className='ml-20 -mr-64'>
-              <Image
-                src='/images/hero/banner-image.png'
-                alt='Banner'
-                width={1150}
-                height={1150}
-              />
-            </div>
-          </motion.div> */}
         </div>
         {/* <CardSlider /> */}
       </div>

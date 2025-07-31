@@ -9,6 +9,7 @@ import { useInView } from 'framer-motion'
 const Portfolio = () => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true })
+  const prefix = process.env.NODE_ENV === 'production' ? '/home' : '';
 
   return (
     <section className='md:pt-16 sm:pt-28 pt-12' id='Prueba'>
@@ -20,7 +21,7 @@ const Portfolio = () => {
             className='lg:-ml-32'
           >
             <Image
-              src='/images/portfolio/img-portfolio.png'
+              src={`${prefix}/images/portfolio/img-portfolio.png`}
               alt='Crypto Portfolio'
               width={700}
               height={600}
