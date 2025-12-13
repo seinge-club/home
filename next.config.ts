@@ -10,6 +10,9 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
+  env: {
+    BASE_PATH: basePath,
+  },
   eslint: {
     ignoreDuringBuilds: true,
   },

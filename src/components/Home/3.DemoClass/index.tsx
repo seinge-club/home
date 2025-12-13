@@ -9,25 +9,7 @@ const Platform = () => {
           {/* Background decoration */}
           <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 blur-3xl rounded-full -mr-16 -mt-16 pointer-events-none"></div>
 
-          <div className='lg:col-span-6 col-span-12 text-center lg:text-left z-10'>
-            <h2 className='text-white sm:text-40 text-30 mb-6 font-bold'>
-              Demo <span className='text-primary'>Class</span>{' '}
-              <br />
-              <span className='text-white/80 text-2xl font-normal'>Try it yourself!</span>
-            </h2>
-            <p className='text-white/80 text-lg mb-8 leading-relaxed max-w-lg mx-auto lg:mx-0'>
-              Accede a nuestra clase de demostración gratuita y descubre cómo nuestra plataforma puede ayudarte a crecer y mejorar tus habilidades.
-            </p>
-            <div className='flex lg:justify-start justify-center'>
-              <Link
-                href='#'
-                className='text-darkmode bg-primary border border-primary py-3 px-8 rounded-full text-lg font-bold hover:bg-white hover:text-darkmode transition-all shadow-lg shadow-primary/20'>
-                Iniciar Demo Completa
-              </Link>
-            </div>
-          </div>
-
-          <div className='lg:col-span-6 col-span-12 z-10 relative'>
+          <div className='lg:col-span-6 col-span-12 z-10 relative order-2 lg:order-1'>
             {/* Mini Interactive Exercise */}
             <div className="bg-dark_grey/80 backdrop-blur-md rounded-2xl p-6 border border-white/10 shadow-2xl transform hover:scale-[1.02] transition-transform duration-300">
               <div className="text-center mb-4">
@@ -46,6 +28,24 @@ const Platform = () => {
               <div className="mt-4 text-center">
                 <p className="text-xs text-white/40">Interactive Preview</p>
               </div>
+            </div>
+          </div>
+
+          <div className='lg:col-span-6 col-span-12 text-center lg:text-left z-10 order-1 lg:order-2'>
+            <h2 className='text-white sm:text-40 text-30 mb-6 font-bold'>
+              Demo <span className='text-primary'>Class</span>{' '}
+              <br />
+              <span className='text-white/80 text-2xl font-normal'>Try it yourself!</span>
+            </h2>
+            <p className='text-white/80 text-lg mb-8 leading-relaxed max-w-lg mx-auto lg:mx-0'>
+              Accede a nuestra clase de demostración gratuita y descubre cómo nuestra plataforma puede ayudarte a crecer y mejorar tus habilidades.
+            </p>
+            <div className='flex lg:justify-start justify-center'>
+              <Link
+                href='#'
+                className='text-darkmode bg-primary border border-primary py-3 px-8 rounded-full text-lg font-bold hover:bg-white hover:text-darkmode transition-all shadow-lg shadow-primary/20'>
+                Start Full Demo
+              </Link>
             </div>
           </div>
         </div>

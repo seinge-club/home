@@ -2,34 +2,28 @@
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 
+import { getAssetPath } from '@/utils/getPath';
+
 const bentoItems = [
   {
     title: "Community First",
     description: "Join a vibrant community of learners and native speakers. It's not just a class, it's a social club.",
-    colSpan: "lg:col-span-2",
-    bg: "bg-gradient-to-br from-[#FF3B30] to-[#990000]",
-    textColor: "text-white"
+    icon: getAssetPath("/images/new-design/icon-community.png")
   },
   {
     title: "Gamified Learning",
     description: "Earn rewards, level up, and track your progress. Learning English has never been this addictive.",
-    colSpan: "lg:col-span-1",
-    bg: "bg-white/5 backdrop-blur-md border border-white/10",
-    textColor: "text-white"
+    icon: getAssetPath("/images/new-design/icon-gamification.png")
   },
   {
     title: "Real World Practice",
     description: "Forget textbooks. Practice with real conversations, role-plays, and dynamic challenges.",
-    colSpan: "lg:col-span-1",
-    bg: "bg-white/5 backdrop-blur-md border border-white/10",
-    textColor: "text-white"
+    icon: getAssetPath("/images/new-design/icon-live.png")
   },
   {
     title: "Flexible Schedule",
     description: "Book sessions that fit your lifestyle. 24/7 availability for active members.",
-    colSpan: "lg:col-span-2",
-    bg: "bg-white/5 backdrop-blur-md border border-white/10",
-    textColor: "text-white"
+    icon: getAssetPath("/images/new-design/icon-flexible.png")
   }
 ]
 
@@ -60,7 +54,7 @@ const SeingeClub = () => {
           </motion.p>
         </div>
 
-        <div className='grid grid-cols-1 lg:grid-cols-3 gap-6'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
           {bentoItems.map((item, index) => (
             <motion.div
               key={index}
@@ -68,14 +62,31 @@ const SeingeClub = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className={`${item.colSpan} ${item.bg} rounded-3xl p-8 md:p-12 hover:scale-[1.02] transition-all duration-300 shadow-2xl overflow-hidden relative group`}
+              className={`relative h-[400px] rounded-3xl overflow-hidden shadow-2xl group cursor-default border border-white/5 bg-black/40`}
             >
-              <div className='relative z-10'>
-                <h3 className={`text-3xl font-bold mb-4 ${item.textColor}`}>{item.title}</h3>
-                <p className={`text-lg opacity-80 ${item.textColor}`}>{item.description}</p>
+              {/* Full Background Image */}
+              {item.icon && (
+                <div className="absolute inset-0 z-0">
+                  <Image
+                    src={item.icon}
+                    alt={item.title}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-110 opacity-60 group-hover:opacity-40"
+                  />
+                </div>
+              )}
+
+              {/* Gradient Overlay for Text Readability */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent z-10" />
+
+              {/* Content Overlay */}
+              <div className='absolute inset-0 p-8 flex flex-col justify-end z-20'>
+                <h3 className={`text-2xl font-bold mb-3 text-white group-hover:text-primary transition-colors`}>{item.title}</h3>
+                <p className={`text-sm text-gray-200 leading-relaxed opacity-90 group-hover:opacity-100`}>{item.description}</p>
+
+                {/* Decorative Line */}
+                <div className="h-1 w-12 bg-primary mt-4 rounded-full group-hover:w-full transition-all duration-500" />
               </div>
-              {/* Decorative Circle for hover effect */}
-              <div className='absolute -right-12 -bottom-12 w-48 h-48 bg-white/10 rounded-full blur-2xl group-hover:bg-white/20 transition-all duration-500' />
             </motion.div>
           ))}
         </div>

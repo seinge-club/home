@@ -4,10 +4,10 @@
   "private": true,
   "homepage": "https://seinge-club.github.io/home",
   "scripts": {
-    "predeploy": "npm run build",
+    "predeploy": "echo 'Use npm run deploy:gh or npm run deploy:firebase'",
     "deploy:gh": "cross-env DEPLOY_TARGET=gh-pages next build && gh-pages -d out",
     "deploy:firebase": "cross-env DEPLOY_TARGET=firebase next build && firebase deploy --only hosting --project seinge-club",
-    "deploy": "gh-pages -d out",
+    "deploy": "npm run deploy:gh",
     "dev": "next dev --turbopack -p 3001",
     "build": "next build",
     "start": "next start -p 3001",

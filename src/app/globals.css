@@ -39,8 +39,9 @@
   --color-secondary: #FDF9E3;
   /* Cream */
   --color-midnight_text: #FDF9E3;
-  --color-muted: #94A3B8;
-  /* Keeping new muted for better contrast, or revert to #FDF9E3 if requested */
+  --color-muted: #F3F4F6;
+  /* Almost White - Max contrast */
+  /* Light Gray - High contrast for dark background */
   --color-error: #ff4d4d;
   --color-warning: #ffb347;
   --color-light_grey: #a38b83;
@@ -119,19 +120,28 @@
 
 @layer utilities {
   .container {
-    @apply w-full max-w-8xl mx-auto;
+    @apply w-full max-w-8xl mx-auto px-4;
   }
 }
 
-html {
-  background: radial-gradient(circle at bottom right,
-      #000000 0%,
-      #000000 90%,
-      var(--color-secondary) 100%);
+
+.image-frame {
+  @apply border-2 border-white/5 rounded-2xl shadow-2xl;
+  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.5);
+}
+
+
+html,
+body {
+  background: var(--color-darkmode);
+  color: white;
+  min-height: 100vh;
 }
 
 section {
-  background: linear-gradient(90deg, #000000 0%, var(--color-secondary) 100%);
+  /* Gradient removed to fix sharp edges */
+  /* background: linear-gradient(90deg, #000000 0%, var(--color-secondary) 100%); */
+  background-color: transparent;
 }
 
 .blog-details p,

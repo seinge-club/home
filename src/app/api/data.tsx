@@ -1,3 +1,4 @@
+import { getAssetPath } from "@/utils/getPath";
 export const footerlabels: { label: string; herf: string }[] = [
   { label: "Terms", herf: "#" },
   { label: "Disclosures", herf: "#" },
@@ -18,51 +19,48 @@ export const footerlabels: { label: string; herf: string }[] = [
  * 
  * No changes needed in this data file.
  */
-export const pricedeta: {
-  title: string;
-  short: string;
-  icon: string;
-  background: string;
-  price: string;
-  mark: string;
-  width: number;
-  height: number;
-  padding: string;
-}[] = [
-    {
-      title: "Sofía",
-      short: "Martínez",
-      icon: "/images/testimonials/avatar1.png",
-      background: "bg-transparent",
-      price: "“Nunca imaginé que podría desenvolverme tan bien en inglés. La experiencia fue divertida y muy natural.”",
-      mark: "Architect",
-      width: 60,
-      height: 60,
-      padding: "px-0 py-0",
-    },
-    {
-      title: "Carlos",
-      short: "Ruiz",
-      icon: "/images/testimonials/avatar2.png",
-      background: "bg-transparent",
-      price: "“Lo que más me gustó fue la dinámica. No sentí que estudiaba, sino que compartía con amigos.”",
-      mark: "Entrepreneur",
-      width: 60,
-      height: 60,
-      padding: "px-0 py-0",
-    },
-    {
-      title: "Valentina",
-      short: "López",
-      icon: "/images/testimonials/avatar3.png",
-      background: "bg-transparent",
-      price: "“Perdí el miedo a hablar. Sainge Club me dio la confianza que necesitaba para mi carrera.”",
-      mark: "Student",
-      width: 60,
-      height: 60,
-      padding: "px-0 py-0",
-    },
-  ];
+export const pricedeta = [
+  {
+    background: 'bg-dark_grey',
+    padding: 'p-4',
+    icon: getAssetPath('/images/testimonials/avatar1.png'),
+    width: 60,
+    height: 60,
+    title: "Maria G.",
+    short: "Marketing Director",
+    price: "“Sainge Club changed my life. I finally speak English with confidence.”"
+  },
+  {
+    background: 'bg-dark_grey',
+    padding: 'p-4',
+    icon: getAssetPath('/images/testimonials/avatar2.png'),
+    width: 60,
+    height: 60,
+    title: "Carlos R.",
+    short: "Software Engineer",
+    price: "“The best place to practice real conversations. Totally recommended.”"
+  },
+  {
+    background: 'bg-dark_grey',
+    padding: 'p-4',
+    icon: getAssetPath('/images/testimonials/avatar3.png'),
+    width: 60,
+    height: 60,
+    title: "Ana P.",
+    short: "Entrepreneur",
+    price: "“I love the community and the 3D space. It feels like a video game.”"
+  },
+  {
+    background: 'bg-dark_grey',
+    padding: 'p-4',
+    icon: getAssetPath('/images/testimonials/avatar1.png'),
+    width: 60,
+    height: 60,
+    title: "Sofia L.",
+    short: "Digital Nomad",
+    price: "“Flexible schedules saved me. I can learn from anywhere.”"
+  }
+];
 
 export const portfolioData: { image: string; title: string }[] = [
   {

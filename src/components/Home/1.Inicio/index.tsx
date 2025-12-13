@@ -7,6 +7,7 @@ import RegistrationForm from './RegistrationForm'
 import CardSlider from '../6.Testimonios/slider'
 import { useEffect, useRef, useState, useCallback } from 'react'
 import { Icon } from '@iconify/react/dist/iconify.js'
+import { getAssetPath } from '@/utils/getPath';
 
 const Hero = () => {
   const [isDemoOpen, setIsDemoOpen] = useState(false)
@@ -54,10 +55,13 @@ const Hero = () => {
   return (
     <section className='relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden min-h-screen flex items-center' id="Inicio">
       {/* Aurora Background Effect */}
-      <div className='absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-primary/20 blur-[150px] rounded-full -z-10 opacity-60 animate-pulse' />
+      <div className='absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] pointer-events-none -z-10'>
+        <Image src={getAssetPath('/images/new-design/aurora-blob.png')} alt='Aurora Effect' fill className='object-cover opacity-60 animate-pulse' />
+      </div>
 
       <div className='container px-4 mx-auto relative z-10'>
-        <div className='max-w-4xl mx-auto text-center'>
+        <div className='max-w-4xl mx-auto text-center relative'>
+
           <motion.div {...leftAnimation}>
             <h1 className='text-6xl md:text-8xl font-bold text-white mb-8 tracking-tighter leading-tight'>
               Speak with <br />

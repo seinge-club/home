@@ -38,7 +38,7 @@ const CardSlider = () => {
     ],
   }
   return (
-    <div className='lg:-mt-16 mt-16'>
+    <div className='lg:-mt-16 mt-16 px-4 md:px-0'>
       <Slider {...settings}>
         {pricedeta.map((item, index) => (
           <div key={index} className='pr-6'>

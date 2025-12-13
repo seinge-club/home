@@ -4,15 +4,15 @@ import { Icon } from '@iconify/react'
 import CardSlider from './slider'
 
 const Upgrade = () => {
-  
-    return (
-      <section className='pb-28 relative mt-16' id='Testimonios'>
-        
-        <CardSlider />
-        <div className='bg-linear-to-br from-tealGreen to-charcoalGray sm:w-50 w-96 z-0 sm:h-50 h-96 rounded-full sm:-bottom-80 bottom-0 blur-400 absolute sm:-left-48 opacity-60'></div>
-      
-      </section>
-    )
+
+  return (
+    <section className='pb-28 relative mt-16 pt-40' id='Testimonios'>
+
+      <CardSlider />
+      <div className='bg-linear-to-br from-tealGreen to-charcoalGray sm:w-50 w-96 z-0 sm:h-50 h-96 rounded-full sm:-bottom-80 bottom-0 blur-400 absolute sm:-left-48 opacity-60'></div>
+
+    </section>
+  )
   // return (
   //   <section className='md:py-40 py-20' id='upgrade'>
   //     <div className='container px-4'>
