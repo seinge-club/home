@@ -33,25 +33,36 @@
   --z-index-999: 999;
 
   /* PALETA DE COLORES REDISEÑO PRO */
-  --color-primary: #FF3B30; /* Electric Crimson */
-  --color-secondary: #FFFFFF;
-  --color-midnight_text: #FFFFFF;
+  /* PALETA DE COLORES ORIGINAL (RECUPERADA) */
+  --color-primary: #781005;
+  /* Deep Red/Maroon - Assuming this is the brand primary based on button contrast */
+  --color-secondary: #FDF9E3;
+  /* Cream */
+  --color-midnight_text: #FDF9E3;
   --color-muted: #94A3B8;
-  --color-error: #FF453A;
-  --color-warning: #FF9F0A;
-  --color-light_grey: #1C1C1E;
-  --color-grey: #2C2C2E;
-  --color-dark_grey: #121212;
-  --color-border: #333333;
-  --color-success: #32D74B;
-  --color-section: #090909;
-  --color-darkmode: #050505; /* Deep Black */
-  --color-darklight: #0A0A0A;
-  --color-dark_border: #222222;
-  --color-tealGreen: #FF3B30; /* Replaced with Primary for consistency */
-  --color-charcoalGray: #121212;
-  --color-deepSlate: #1C1C1E;
-  --color-slateGray: #2C2C2E;
+  /* Keeping new muted for better contrast, or revert to #FDF9E3 if requested */
+  --color-error: #ff4d4d;
+  --color-warning: #ffb347;
+  --color-light_grey: #a38b83;
+  --color-grey: #2e1e1b;
+  --color-dark_grey: #1a100e;
+  --color-border: #4a2a22;
+  --color-success: #4CAF50;
+  --color-section: #3a1d17;
+  --color-darkmode: #120200;
+  /* Deep Brown/Black */
+  --color-darklight: #1e0a07;
+  --color-dark_border: #2a130d;
+  --color-tealGreen: #477e70;
+  /* Restored */
+  --color-charcoalGray: #666c78;
+  /* Restored */
+  --color-deepSlate: #282c36;
+  --color-slateGray: #2f3543;
+
+  /* MODIFICACIÓN: Ajustes para el nuevo diseño usando colores de marca */
+  /* --color-primary: #FF3B30; (Electric Crimson Removed) */
+  /* --color-darkmode: #050505; (Deep Black Removed) */
 
   /* FIN DE MODIFICACIÓN DE COLORES */
 
@@ -96,6 +107,7 @@
 }
 
 @layer base {
+
   *,
   ::after,
   ::before,
@@ -112,13 +124,12 @@
 }
 
 html {
-  background: radial-gradient(
-    circle at bottom right, 
-    #000000 0%, 
-    #000000 90%, 
-    var(--color-secondary) 100%
-  );
+  background: radial-gradient(circle at bottom right,
+      #000000 0%,
+      #000000 90%,
+      var(--color-secondary) 100%);
 }
+
 section {
   background: linear-gradient(90deg, #000000 0%, var(--color-secondary) 100%);
 }
