@@ -5,8 +5,8 @@
   "homepage": "https://seinge-club.github.io/home",
   "scripts": {
     "predeploy": "npm run build",
-    "deploy:gh": "set DEPLOY_TARGET=gh-pages&& next build && gh-pages -d out",
-    "deploy:firebase": "set DEPLOY_TARGET=firebase&& next build && firebase deploy --only hosting --project seinge-club",
+    "deploy:gh": "cross-env DEPLOY_TARGET=gh-pages next build && gh-pages -d out",
+    "deploy:firebase": "cross-env DEPLOY_TARGET=firebase next build && firebase deploy --only hosting --project seinge-club",
     "deploy": "gh-pages -d out",
     "dev": "next dev --turbopack -p 3001",
     "build": "next build",
@@ -40,6 +40,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "@types/react-slick": "^0.23.13",
+    "cross-env": "^10.1.0",
     "eslint": "^9",
     "eslint-config-next": "15.2.4",
     "gh-pages": "^6.3.0",
