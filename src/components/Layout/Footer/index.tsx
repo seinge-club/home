@@ -9,7 +9,7 @@ const Footer: FC = () => {
     <footer className='pt-16 bg-darkmode'>
       <div className='container px-4'>
         <div className='flex flex-col items-center justify-center pb-16'>
-          <Logo width={220} height={90} className="w-56 h-auto mx-auto" />
+          <Logo width={220} height={90} className="w-56 h-auto mx-auto invert brightness-0 opacity-80" />
           <div className='flex gap-6 items-center mt-8 relative z-1 justify-center'>
             <Link href='https://wa.me/593958758134' className='group'>
               <Icon

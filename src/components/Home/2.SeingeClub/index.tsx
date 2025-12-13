@@ -48,7 +48,7 @@ const TimeLine = () => {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
         </div>
-        
+
         {/* Contenido de texto (50% ancho) */}
         <div className='container relative z-10 h-full flex items-center py-16'>
           <div className='lg:w-1/2 w-full px-4'>
@@ -58,18 +58,23 @@ const TimeLine = () => {
               transition={{ duration: 0.6 }}
             >
               <h2 className='sm:text-40 text-30 text-secondary font-medium mb-8'>
-                ¿Qué es Sainge Club?
+                What is Sainge Club?
               </h2>
 
               <p className="text-lg md:text-xl text-secondary leading-relaxed mb-6">
-                Sainge Club <span className="text-[#3F0904] font-medium">no es</span> un curso <span className="text-secondary font-medium">tradicional</span>.
-                Es una <span className="text-[#3F0904] font-medium">experiencia</span> expresiva y emocional <span className="text-secondary font-medium">para aprender</span> inglés desde el juego,
-                la voz y la vida real.
+                <span className="text-[#3F0904] font-medium">Sainge Club</span> is a language club focused on conversation and social interaction, with both native and local speakers,
+                to help you <span className="text-secondary font-medium">overcome your fear</span> of speaking, break stereotypes, and use English in an <span className="text-[#3F0904] font-medium">authentic</span> and meaningful way.
               </p>
-                        
+
+              <p className="text-lg md:text-xl text-secondary leading-relaxed mb-6">
+                This isn’t about just studying English. It’s about <span className="text-secondary font-medium">putting in practice</span> the language feeling free to express yourself,
+                make mistakes, and learn naturally, surrounded by people who <span className="text-[#3F0904] font-medium">motivate</span> and challenge you.
+              </p>
+
               <p className="text-lg md:text-xl text-secondary leading-relaxed">
-                <span className="text-[#3F0904] font-medium">Hablarás</span> desde el primer día, <span className="text-secondary font-medium">a tu ritmo</span>,
-                con actividades basadas en retos, juegos en línea y contacto real.
+                You will learn the language while <span className="text-secondary font-medium">socializing</span> and doing your favorite activities like skating, practicing yoga,
+                shopping, or hunting for the best food in town. And you know what is even better? <span className="text-[#3F0904] font-medium">You could end up studying completely for free</span>,
+                because we reward your discipline and determination.
               </p>
             </motion.div>
           </div>
@@ -94,72 +99,72 @@ const TimeLine = () => {
                   className='w-80% mx-auto'
                 />
               </div><div className='absolute lg:top-40 top-36 lg:left-0 -left-20 w-72 flex items-center gap-6'>
-              <div className='text-right'>
-                <p className='text-18 text-muted/60'>
-                  Clases dinámicas online
-                </p>
+                <div className='text-right'>
+                  <p className='text-18 text-muted/60'>
+                    Clases dinámicas online
+                  </p>
+                </div>
+                <div className='bg-light_grey/45 backdrop-blur-xs p-4 h-20 w-20 rounded-full flex items-center justify-center'>
+                  <Image
+                    src='/images/timeline/icon-planning.svg'
+                    alt='Planning'
+                    width={44}
+                    height={44}
+                    className='w-12 h-12'
+                  />
+                </div>
               </div>
-              <div className='bg-light_grey/45 backdrop-blur-xs p-4 h-20 w-20 rounded-full flex items-center justify-center'>
-                <Image
-                  src='/images/timeline/icon-planning.svg'
-                  alt='Planning'
-                  width={44}
-                  height={44}
-                  className='w-12 h-12'
-                />
-              </div>
-            </div>
 
-            <div className='absolute lg:top-40 top-36 lg:right-0 -right-20 w-72 flex items-center gap-6'>
-              <div className='bg-light_grey/45 backdrop-blur-xs p-4 h-20 w-20 rounded-full flex items-center justify-center'>
-                <Image
-                  src='/images/timeline/icon-refinement.svg'
-                  alt='Refinement'
-                  width={44}
-                  height={44}
-                  className='w-12 h-12'
-                />
+              <div className='absolute lg:top-40 top-36 lg:right-0 -right-20 w-72 flex items-center gap-6'>
+                <div className='bg-light_grey/45 backdrop-blur-xs p-4 h-20 w-20 rounded-full flex items-center justify-center'>
+                  <Image
+                    src='/images/timeline/icon-refinement.svg'
+                    alt='Refinement'
+                    width={44}
+                    height={44}
+                    className='w-12 h-12'
+                  />
+                </div>
+                <div className='text-left'>
+                  <p className='text-18 text-muted/60'>
+                    Retos con voz, juegos, creatividad
+                  </p>
+                </div>
               </div>
-              <div className='text-left'>
-                <p className='text-18 text-muted/60'>
-                  Retos con voz, juegos, creatividad
-                </p>
-              </div>
-            </div>
 
-            <div className='absolute lg:bottom-48 bottom-36 lg:left-0 -left-20 w-72 flex items-center gap-6'>
-              <div className='text-right'>
-                <p className='text-18 text-muted/60'>
-                  Clubes de conversación y acompañamiento
-                </p>
+              <div className='absolute lg:bottom-48 bottom-36 lg:left-0 -left-20 w-72 flex items-center gap-6'>
+                <div className='text-right'>
+                  <p className='text-18 text-muted/60'>
+                    Clubes de conversación y acompañamiento
+                  </p>
+                </div>
+                <div className='bg-light_grey/45 backdrop-blur-xs p-4 h-20 w-20 rounded-full flex items-center justify-center'>
+                  <Image
+                    src='/images/timeline/icon-prototype.svg'
+                    alt='Prototype'
+                    width={44}
+                    height={44}
+                    className='w-12 h-12'
+                  />
+                </div>
               </div>
-              <div className='bg-light_grey/45 backdrop-blur-xs p-4 h-20 w-20 rounded-full flex items-center justify-center'>
-                <Image
-                  src='/images/timeline/icon-prototype.svg'
-                  alt='Prototype'
-                  width={44}
-                  height={44}
-                  className='w-12 h-12'
-                />
-              </div>
-            </div>
 
-            <div className='absolute lg:bottom-48 bottom-36 lg:right-0 -right-20 w-72 flex items-center gap-6'>
-              <div className='bg-light_grey/45 backdrop-blur-xs p-4 h-20 w-20 rounded-full flex items-center justify-center'>
-                <Image
-                  src='/images/timeline/icon-support.svg'
-                  alt='Scale and support'
-                  width={44}
-                  height={44}
-                  className='w-12 h-12'
-                />
+              <div className='absolute lg:bottom-48 bottom-36 lg:right-0 -right-20 w-72 flex items-center gap-6'>
+                <div className='bg-light_grey/45 backdrop-blur-xs p-4 h-20 w-20 rounded-full flex items-center justify-center'>
+                  <Image
+                    src='/images/timeline/icon-support.svg'
+                    alt='Scale and support'
+                    width={44}
+                    height={44}
+                    className='w-12 h-12'
+                  />
+                </div>
+                <div className='text-left'>
+                  <p className='text-18 text-muted/60'>
+                    Estructura desbloqueable por niveles
+                  </p>
+                </div>
               </div>
-              <div className='text-left'>
-                <p className='text-18 text-muted/60'>
-                  Estructura desbloqueable por niveles
-                </p>
-              </div>
-            </div>
             </div>
             <div className='grid sm:grid-cols-2 gap-8 md:hidden'>
               {timelineData.map((item, index) => (

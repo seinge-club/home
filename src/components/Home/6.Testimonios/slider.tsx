@@ -45,7 +45,7 @@ const CardSlider = () => {
             <div className='px-5 py-12 bg-dark_grey/80 rounded-xl'>
               <div className='flex items-center gap-5'>
                 <div
-                  className={`${item.background} ${item.padding} rounded-full`}>
+                  className={`${item.background} ${item.padding} rounded-full overflow-hidden w-16 h-16 flex items-center justify-center`}>
                   <Image
                     src={item.icon}
                     alt='icon'

@@ -2,28 +2,28 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import BuyCrypto from './buy-form'
-import SellCrypto from './sell-form'
+import DemoComponent from '../Demo/DemoComponent'
+import RegistrationForm from './RegistrationForm'
 import CardSlider from '../6.Testimonios/slider'
 import { useEffect, useRef, useState, useCallback } from 'react'
 import { Icon } from '@iconify/react/dist/iconify.js'
 
 const Hero = () => {
-  const [isBuying, setIsBuyingOpen] = useState(false)
-  const [isSelling, setIsSellingOpen] = useState(false)
-  const BuyRef = useRef<HTMLDivElement>(null)
-  const SellRef = useRef<HTMLDivElement>(null)
+  const [isDemoOpen, setIsDemoOpen] = useState(false)
+  const [isRegisterOpen, setIsRegisterOpen] = useState(false)
+  const DemoRef = useRef<HTMLDivElement>(null)
+  const RegisterRef = useRef<HTMLDivElement>(null)
 
   const handleClickOutside = useCallback(
     (event: MouseEvent) => {
-      if (BuyRef.current && !BuyRef.current.contains(event.target as Node)) {
-        setIsBuyingOpen(false)
+      if (DemoRef.current && !DemoRef.current.contains(event.target as Node)) {
+        setIsDemoOpen(false)
       }
-      if (SellRef.current && !SellRef.current.contains(event.target as Node)) {
-        setIsSellingOpen(false)
+      if (RegisterRef.current && !RegisterRef.current.contains(event.target as Node)) {
+        setIsRegisterOpen(false)
       }
     },
-    [BuyRef, SellRef]
+    [DemoRef, RegisterRef]
   )
 
   useEffect(() => {
@@ -34,8 +34,8 @@ const Hero = () => {
   }, [handleClickOutside])
 
   useEffect(() => {
-    document.body.style.overflow = isBuying || isSelling ? 'hidden' : ''
-  }, [isBuying, isSelling])
+    document.body.style.overflow = isDemoOpen || isRegisterOpen ? 'hidden' : ''
+  }, [isDemoOpen, isRegisterOpen])
 
   const leftAnimation = {
     initial: { x: '-100%', opacity: 0 },
@@ -53,7 +53,7 @@ const Hero = () => {
 
   return (
     <section
-      className='relative md:pt-40 md:pb-28 py-20 overflow-hidden z-1'
+      className='relative md:pt-40 md:pb-28 py-20 overflow-hidden z-1 min-h-screen flex items-center'
       id='Inicio'>
       <div className='container px-4 mx-auto'>
         <div className='flex flex-col'>
@@ -66,28 +66,25 @@ const Hero = () => {
                 height={40}
               />
             </div> */}
-            <h1 className='text-5xl md:text-7xl font-bold text-center text-white mb-18 leading-tight'>
-              <span className='text-primary'>Unlock</span> Your Voice. Speak <span className='text-primary'>English</span>. Feel Different
+            <h1 className='text-5xl md:text-7xl font-bold text-center text-white mb-18 leading-tight drop-shadow-lg'>
+              Welcome to <span className='text-primary'>Sainge Club</span>.<br />
+              <span className='text-3xl md:text-5xl font-medium mt-4 block text-white/90'>Leisure activities outside in English.</span>
             </h1>
-            <div className='flex gap-8 mb-18 items-center lg:justify-start justify-center mb-5 mt-24'>
-              <p className='text-white sm:text-28 text-18 mb-0'>
-                Un curso de inglés para adultos que <span className='text-primary'>combina</span> expresión oral, juegos, terapia lingüística y 
-                <span className='text-primary'> libertad</span>.
-              </p>
-              <p className='text-white sm:text-28 text-18 mb-0'>
-                Ideal para profesionales sin tiempo, pero con <span className='text-primary'>ganas de hablar</span> y sentirse 
-              <span className='text-primary'> seguros</span>.
+            <div className='flex gap-8 mb-18 items-center lg:justify-start justify-center mb-5 mt-12 px-4'>
+              <p className='text-white sm:text-24 text-18 mb-0 text-center mx-auto max-w-4xl leading-relaxed'>
+                <span className='text-primary font-bold block mb-2'>What if the problem isn’t English… but how you use it?</span>
+                English is not complicated, we think the hardest part is using it to connect with people, places, new jobs and even better salaries.
               </p>
             </div>
-            <div className='flex flex-col sm:flex-row gap-6 justify-center'>
+            <div className='flex flex-col sm:flex-row gap-6 justify-center items-center mt-8'>
               <button
-                className='bg-primary border border-primary rounded-lg text-21 font-medium hover:bg-transparent hover:text-primary text-darkmode py-2 px-7 z-50'
-                onClick={() => setIsBuyingOpen(true)}>
-                Ver Demo Gratis
+                className='bg-primary border border-primary rounded-full text-21 font-bold text-darkmode py-3 px-10 z-50 hover:scale-105 transition-transform shadow-lg shadow-primary/20'
+                onClick={() => setIsDemoOpen(true)}>
+                Free DEMO
               </button>
               <button
-                className='bg-transparent border border-primary rounded-lg text-21 font-medium hover:bg-primary hover:text-darkmode text-primary py-2 px-7'
-                onClick={() => setIsSellingOpen(true)}>
+                className='bg-white/5 backdrop-blur-sm border border-white/20 rounded-full text-21 font-medium hover:bg-white/10 hover:border-primary/50 hover:text-white text-white/90 py-3 px-10 transition-all'
+                onClick={() => setIsRegisterOpen(true)}>
                 Empezar Experiencia
               </button>
             </div>
@@ -127,40 +124,42 @@ const Hero = () => {
       </div>
       <div className='absolute w-50 h-50 bg-linear-to-bl from-tealGreen from-50% to-charcoalGray to-60% blur-400 rounded-full -top-64 -right-14 -z-1'></div>
 
-      {/* Modals for Buy and Sell */}
-      {isBuying && (
-        <div className='fixed top-0 left-0 w-full h-full bg-black/50 flex items-center justify-center z-50'>
+      {/* Demo Modal */}
+      {isDemoOpen && (
+        <div className='fixed top-0 left-0 w-full h-full bg-black/50 flex items-center justify-center z-50 backdrop-blur-sm p-4'>
           <div
-            ref={BuyRef}
-            className='relative w-full max-w-md overflow-hidden rounded-lg px-8 pt-14 pb-8 z-999 text-center bg-dark_grey/90 backdrop-blur-md'>
+            ref={DemoRef}
+            className='relative w-full max-w-lg overflow-hidden rounded-2xl px-8 pt-14 pb-8 z-999 text-center bg-dark_grey border border-white/10 shadow-2xl'>
             <button
-              onClick={() => setIsBuyingOpen(false)}
-              className='absolute top-0 right-0 mr-8 mt-8 dark:invert'
-              aria-label='Close Buy Modal'>
+              onClick={() => setIsDemoOpen(false)}
+              className='absolute top-4 right-4 p-2 rounded-full hover:bg-white/10 transition-colors'
+              aria-label='Close Demo Modal'>
               <Icon
-                icon='tabler:currency-xrp'
-                className='text-white hover:text-primary text-24 inline-block me-2'
+                icon='tabler:x'
+                className='text-white hover:text-primary text-24'
               />
             </button>
-            <BuyCrypto />
+            <DemoComponent />
           </div>
         </div>
       )}
-      {isSelling && (
-        <div className='fixed top-0 left-0 w-full h-full bg-black/50 flex items-center justify-center z-50'>
+
+      {/* Registration Modal */}
+      {isRegisterOpen && (
+        <div className='fixed top-0 left-0 w-full h-full bg-black/50 flex items-center justify-center z-50 backdrop-blur-sm p-4'>
           <div
-            ref={SellRef}
-            className='relative w-full max-w-md overflow-hidden rounded-lg px-8 pt-14 pb-8 z-999 text-center bg-dark_grey/90 backdrop-blur-md'>
+            ref={RegisterRef}
+            className='relative w-full max-w-lg overflow-hidden rounded-2xl px-8 pt-14 pb-8 z-999 text-center bg-dark_grey border border-white/10 shadow-2xl'>
             <button
-              onClick={() => setIsSellingOpen(false)}
-              className='absolute top-0 right-0 mr-8 mt-8 dark:invert'
-              aria-label='Close Sell Modal'>
+              onClick={() => setIsRegisterOpen(false)}
+              className='absolute top-4 right-4 p-2 rounded-full hover:bg-white/10 transition-colors'
+              aria-label='Close Registration Modal'>
               <Icon
-                icon='tabler:currency-xrp'
-                className='text-white hover:text-primary text-24 inline-block me-2'
+                icon='tabler:x'
+                className='text-white hover:text-primary text-24'
               />
             </button>
-            <SellCrypto />
+            <RegistrationForm />
           </div>
         </div>
       )}
