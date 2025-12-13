@@ -52,77 +52,51 @@ const Hero = () => {
   }
 
   return (
-    <section
-      className='relative md:pt-40 md:pb-28 py-20 overflow-hidden z-1 min-h-screen flex items-center'
-      id='Inicio'>
-      <div className='container px-4 mx-auto'>
-        <div className='flex flex-col'>
-          <motion.div {...leftAnimation} className='w-full'>
-            {/* <div className='flex gap-6 items-center lg:justify-start justify-center mb-5 mt-24'>
-              <Image
-                src='/images/icons/icon-bag.svg'
-                alt='icon'
-                width={40}
-                height={40}
-              />
-            </div> */}
-            <h1 className='text-5xl md:text-7xl font-bold text-center text-white mb-18 leading-tight drop-shadow-lg'>
-              Welcome to <span className='text-primary'>Sainge Club</span>.<br />
-              <span className='text-3xl md:text-5xl font-medium mt-4 block text-white/90'>Leisure activities outside in English.</span>
+    <section className='relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden min-h-screen flex items-center' id="Inicio">
+      {/* Aurora Background Effect */}
+      <div className='absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-primary/20 blur-[150px] rounded-full -z-10 opacity-60 animate-pulse' />
+
+      <div className='container px-4 mx-auto relative z-10'>
+        <div className='max-w-4xl mx-auto text-center'>
+          <motion.div {...leftAnimation}>
+            <h1 className='text-6xl md:text-8xl font-bold text-white mb-8 tracking-tighter leading-tight'>
+              Speak with <br />
+              <span className='text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-500'>Confidence.</span>
             </h1>
-            <div className='flex gap-8 mb-18 items-center lg:justify-start justify-center mb-5 mt-12 px-4'>
-              <p className='text-white sm:text-24 text-18 mb-0 text-center mx-auto max-w-4xl leading-relaxed'>
-                <span className='text-primary font-bold block mb-2'>What if the problem isn’t English… but how you use it?</span>
-                English is not complicated, we think the hardest part is using it to connect with people, places, new jobs and even better salaries.
-              </p>
-            </div>
-            <div className='flex flex-col sm:flex-row gap-6 justify-center items-center mt-8'>
+
+            <p className='text-xl md:text-2xl text-muted/80 mb-12 max-w-2xl mx-auto leading-relaxed'>
+              We are not just a class. We are a social club where you learn by living.
+              Join the revolution of authentic English learning.
+            </p>
+
+            <div className='flex flex-col sm:flex-row items-center justify-center gap-6'>
               <button
-                className='bg-primary border border-primary rounded-full text-21 font-bold text-darkmode py-3 px-10 z-50 hover:scale-105 transition-transform shadow-lg shadow-primary/20'
-                onClick={() => setIsDemoOpen(true)}>
-                Free DEMO
+                onClick={() => setIsRegisterOpen(true)}
+                className='group relative px-8 py-4 bg-primary rounded-full text-white font-semibold text-lg hover:shadow-[0_0_40px_rgba(255,59,48,0.5)] transition-all duration-300 transform hover:-translate-y-1'
+              >
+                Start Experience
+                <div className='absolute inset-0 rounded-full bg-white/20 blur-md opacity-0 group-hover:opacity-100 transition-opacity' />
               </button>
+
               <button
-                className='bg-white/5 backdrop-blur-sm border border-white/20 rounded-full text-21 font-medium hover:bg-white/10 hover:border-primary/50 hover:text-white text-white/90 py-3 px-10 transition-all'
-                onClick={() => setIsRegisterOpen(true)}>
-                Empezar Experiencia
+                onClick={() => setIsDemoOpen(true)}
+                className='px-8 py-4 rounded-full text-white font-medium text-lg border border-white/10 hover:bg-white/5 transition-all flex items-center gap-2 group'
+              >
+                <span>Try Demo</span>
+                <svg
+                  className="w-5 h-5 group-hover:translate-x-1 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
               </button>
             </div>
-            {/* <div className='flex items-center md:justify-start justify-center gap-12 mt-20'>
-              <Link href='#' className='hover:scale-110 duration-300'>
-                <Image
-                  src='/images/hero/playstore.png'
-                  alt='Play Store'
-                  width={240}
-                  height={70}
-                />
-              </Link>
-              <Link href='#' className='hover:scale-110 duration-300'>
-                <Image
-                  src='/images/hero/applestore.png'
-                  alt='App Store'
-                  width={240}
-                  height={70}
-                />
-              </Link>
-            </div> */}
           </motion.div>
-          {/* <motion.div
-            {...rightAnimation}
-            className='col-span-7 lg:block hidden'>
-            <div className='ml-20 -mr-64'>
-              <Image
-                src='/images/hero/banner-image.png'
-                alt='Banner'
-                width={1150}
-                height={1150}
-              />
-            </div>
-          </motion.div> */}
         </div>
-        {/* <CardSlider /> */}
       </div>
-      <div className='absolute w-50 h-50 bg-linear-to-bl from-tealGreen from-50% to-charcoalGray to-60% blur-400 rounded-full -top-64 -right-14 -z-1'></div>
 
       {/* Demo Modal */}
       {isDemoOpen && (

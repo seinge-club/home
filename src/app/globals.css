@@ -32,28 +32,26 @@
   --z-index-2: 2;
   --z-index-999: 999;
 
-  /* PALETA DE COLORES ACTUALIZADA (SOLO ESTA SECCIÓN MODIFICADA) */
-  /* --color-primary: #781005;
-  --color-secondary: #FDF9E3; */
-  --color-primary: #FDF9E3;
-  --color-secondary: #781005;
-  --color-midnight_text: #FDF9E3;
-  --color-muted: #FDF9E3;
-  --color-error: #ff4d4d;
-  --color-warning: #ffb347;
-  --color-light_grey: #a38b83;
-  --color-grey: #2e1e1b;
-  --color-dark_grey: #1a100e;
-  --color-border: #4a2a22;
-  --color-success: #4CAF50;
-  --color-section: #3a1d17;
-  --color-darkmode: #120200;
-  --color-darklight: #1e0a07;
-  --color-dark_border: #2a130d;
-  --color-tealGreen: #477e70;
-  --color-charcoalGray: #666c78;
-  --color-deepSlate: #282c36;
-  --color-slateGray: #2f3543;
+  /* PALETA DE COLORES REDISEÑO PRO */
+  --color-primary: #FF3B30; /* Electric Crimson */
+  --color-secondary: #FFFFFF;
+  --color-midnight_text: #FFFFFF;
+  --color-muted: #94A3B8;
+  --color-error: #FF453A;
+  --color-warning: #FF9F0A;
+  --color-light_grey: #1C1C1E;
+  --color-grey: #2C2C2E;
+  --color-dark_grey: #121212;
+  --color-border: #333333;
+  --color-success: #32D74B;
+  --color-section: #090909;
+  --color-darkmode: #050505; /* Deep Black */
+  --color-darklight: #0A0A0A;
+  --color-dark_border: #222222;
+  --color-tealGreen: #FF3B30; /* Replaced with Primary for consistency */
+  --color-charcoalGray: #121212;
+  --color-deepSlate: #1C1C1E;
+  --color-slateGray: #2C2C2E;
 
   /* FIN DE MODIFICACIÓN DE COLORES */
 
